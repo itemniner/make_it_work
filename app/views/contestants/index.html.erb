@@ -1,0 +1,9 @@
+
+<% @contestants.each do |contestant| %>
+  <section id="contestant-<%=contestant.id%>">
+    <%= contestant.name %>
+    <% contestant.projects.each do |project| %>
+      <%= project.name %>
+    <% end %>
+  </section>
+<% end %>

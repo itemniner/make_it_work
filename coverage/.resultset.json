@@ -243,6 +243,8 @@
           1,
           null,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -385,7 +387,7 @@
           null
         ]
       },
-      "/Users/thunderwolf/turing/mod2_2/challenges/make_it_work/app/controllers/projects_controller.rb": {
+      "/Users/thunderwolf/turing/mod2_2/challenges/make_it_work/app/controllers/contestants_controller.rb": {
         "lines": [
           1,
           1,
@@ -399,8 +401,17 @@
           1,
           null
         ]
+      },
+      "/Users/thunderwolf/turing/mod2_2/challenges/make_it_work/app/controllers/projects_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1581093872
+    "timestamp": 1581094538
   }
 }
