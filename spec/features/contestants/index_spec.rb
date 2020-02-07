@@ -30,13 +30,13 @@ RSpec.describe "on the index page" do
 
       visit "/contestants"
 
-      within("#application-#{ray.id}") do
+      within("#contestant-#{ray.id}") do
         expect(page).to have_content(ray.name)
         expect(page).to have_content(project_1.name)
         expect(page).to have_content(project_2.name)
       end
 
-      within("#application-#{alfredo.id}") do
+      within("#contestant-#{alfredo.id}") do
         expect(page).to have_content(alfredo.name)
         expect(page).to have_content(project_3.name)
         expect(page).to have_content(project_4.name)
