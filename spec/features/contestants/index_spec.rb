@@ -23,10 +23,10 @@ RSpec.describe "on the index page" do
       project_3 = furniture_challenge.projects.create(name: "Upholstery Tuxedo", material: "Couch")
       project_4 = furniture_challenge.projects.create(name: "Litfit", material: "Lamp")
 
-      ContestantProjects.create(contestant: ray, project: project_1)
-      ContestantProjects.create(contestant: ray, project: project_2)
-      ContestantProjects.create(contestant: alfredo, project: project_3)
-      ContestantProjects.create(contestant: alfredo, project: project_4)
+      ContestantProject.create(contestant: ray, project: project_1)
+      ContestantProject.create(contestant: ray, project: project_2)
+      ContestantProject.create(contestant: alfredo, project: project_3)
+      ContestantProject.create(contestant: alfredo, project: project_4)
 
       visit "/contestants"
 
