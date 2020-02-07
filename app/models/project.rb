@@ -7,4 +7,9 @@ class Project <ApplicationRecord
   def contestant_count
     self.contestants.count
   end
+
+  def average_age
+    self.contestants.average(:age)
+  end
 end
+
