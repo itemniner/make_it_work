@@ -362,8 +362,23 @@
           1,
           null
         ]
+      },
+      "/Users/thunderwolf/turing/mod2_2/challenges/make_it_work/app/controllers/projects_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod2_2/challenges/make_it_work/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1581092625
+    "timestamp": 1581092803
   }
 }
