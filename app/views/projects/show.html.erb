@@ -5,12 +5,18 @@
 <p><%= @project.material %></p>
 <p><%= @project.challenge.theme %></p>
 
-<%= form_tag "/projects/#{@project.id}/contestants/new" do %>
+<%= form_tag "/projects/#{@project.id}/contestants" do %>
   <p><%= label_tag :name %>
   <%= text_field_tag :name %></p>
 
-  <p><%= label_tag :material %>
-  <%= text_field_tag :material %></p>
+  <p><%= label_tag :age %>
+  <%= text_field_tag :age %></p>
+
+  <p><%= label_tag :hometown %>
+  <%= text_field_tag :hometown %></p>
+
+  <p><%= label_tag :years_of_experience %>
+  <%= text_field_tag :years_of_experience %></p>
 
   <%= submit_tag "Add Contestant To Project"%>
 <% end %>

@@ -107,7 +107,9 @@ RSpec.describe "on the show page" do
       expect(page).to have_content("Number of Contestants 3")
       
       fill_in :name, with: "Meg"
-      fill_in :material, with: "Snow lots of snow"
+      fill_in :age, with: 22
+      fill_in :hometown, with: "Hersey"
+      fill_in :years_of_experience, with: 10
 
       click_on "Add Contestant To Project" 
 
