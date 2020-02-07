@@ -12,7 +12,47 @@ RSpec.describe "on the show page" do
       expect(page).to have_content(project_1.material)
       expect(page).to have_content(project_1.challenge.theme)
     end
+    it "can see the count of the number of contestants on this project" do
+      ray = Contestant.create(
+        name: "Ray",
+        age: 37,
+        hometown: "Anahiem",
+        years_of_experience: 12)
+      alfredo = Contestant.create(
+        name: "Alfredo",
+        age: 20,
+        hometown: "Denver",
+        years_of_experience: 3)
+      alex = Contestant.create(
+        name: "Alex",
+        age: 13,
+        hometown: "Richmond",
+        years_of_experience: 8)
+
+      recycled_material_challenge = Challenge.create(theme: "Recycled Material", project_budget: 1000)
+
+      project_1 = recycled_material_challenge.projects.create(name: "News Chic", material: "Newspaper")
+      project_2 = recycled_material_challenge.projects.create(name: "Boardfit", material: "Cardboard Boxes")
+      
+      ContestantProject.create(contestant: ray, project: project_1)
+      ContestantProject.create(contestant: alex, project: project_1)
+      ContestantProject.create(contestant: alfredo, project: project_1)
+      ContestantProject.create(contestant: alfredo, project: project_2)
+
+      visit "/projects/#{project_1.id}"
+
+      expect(project_1.contestant_count).to eq(3)
+      expect(page).to have_content("Number of Contestants #{project_1.contestant_count}")
+    end
   end 
 end
 
+# User Story 3 of 4
+# As a visitor,
+# When I visit a project's show page
+# I see a count of the number of contestants on this project
 
+# (e.g.    Litfit
+#     Material: Lamp Shade
+#   Challenge Theme: Apartment Furnishings
+#   Number of Contestants: 3 )
